@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/P4CXT6V/Free-Book-Mockup-1-1.jpg",
+      "review": "A timeless classic that captures the essence of the Jazz Age with its gripping narrative and unforgettable characters.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classic", "Drama"],
+      "publisher": "Charles Scribner's Sons",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "Mind Game of Winners",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/KFjGrcZ/images-1.jpg",
+      "review": "A chilling dystopian novel that serves as a stark warning about the dangers of totalitarianism and surveillance.",
+      "totalPages": 328,
+      "rating": 4.8,
+      "category": "Science Fiction",
+      "tags": ["Dystopian", "Political"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 3,
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "image": "https://i.ibb.co/Ns6FBFP/images-3.jpg",
+      "review": "A profound exploration of justice, morality, and racial inequality in the American South, told through the eyes of a young girl.",
+      "totalPages": 324,
+      "rating": 4.7,
+      "category": "Fiction",
+      "tags": ["Coming of Age", "Legal Drama"],
+      "publisher": "J. B. Lippincott & Co.",
+      "yearOfPublishing": 1960
+    },
+    {
+      "bookId": 4,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/k4FNd9f/images-4.jpg",
+      "review": "A poignant portrayal of teenage angst and alienation, capturing the disillusionment and search for identity of its protagonist.",
+      "totalPages": 224,
+      "rating": 4.3,
+      "category": "Fiction",
+      "tags": ["Coming of Age", "Modern Classic"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 5,
+      "bookName": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "image": "https://i.ibb.co/DzBpVcR/images-5.jpg",
+      "review": "A delightful comedy of manners that explores themes of love, class, and societal expectations in Regency-era England.",
+      "totalPages": 432,
+      "rating": 4.6,
+      "category": "Fiction",
+      "tags": ["Romance", "Classic"],
+      "publisher": "T. Egerton, Whitehall",
+      "yearOfPublishing": 1813
+    },
+    {
+      "bookId": 6,
+      "bookName": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "image": "https://i.ibb.co/wNL3zzc/Paperback-Book-Cover-Template.webp",
+      "review": "An epic fantasy masterpiece that transports readers to a richly imagined world filled with adventure, magic, and heroic quests.",
+      "totalPages": 1178,
+      "rating": 4.9,
+      "category": "Fantasy",
+      "tags": ["Epic", "Adventure"],
+      "publisher": "Allen & Unwin",
+      "yearOfPublishing": 1954
+    }
+  ]
+  
