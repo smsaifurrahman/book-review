@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { getReadListFromLs, getWishListFromLs } from '../../localStorage';
 import { Link, Outlet } from 'react-router-dom';
+import ReadBooks from '../ReadBooks/ReadBooks';
+import WishListBooks from '../WishListBooks/WishListBooks';
 
 const ListedBooks = () => {
 
@@ -39,7 +41,10 @@ const ListedBooks = () => {
             
 
 
-            <Outlet></Outlet>
+            <Outlet>
+                <ReadBooks></ReadBooks>
+                <WishListBooks></WishListBooks>
+            </Outlet>
 
        
         </div>
