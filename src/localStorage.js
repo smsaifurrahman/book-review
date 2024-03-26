@@ -36,7 +36,7 @@ export const saveToLocalStorage = (data, value) => {
 
         }
         else {
-            return toast.warn('You have Already added to wish list')
+            return toast.warn('Book has been added to wish list already')
         }
     }
    
