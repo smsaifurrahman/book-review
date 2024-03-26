@@ -39,7 +39,7 @@ const BookDetail = () => {
          <div className='flex flex-row gap-6 items-center'>
             <span className='font-bold'>Tags: </span>
             {tags && Array.isArray(tags) && tags.map(tag => (
-                <button key={tag.id} className='btn text-[#23BE0A]'>{tag}</button>
+                <button key={tag.id} className='btn text-[#23BE0A]'>#{tag}</button>
             ))}
          </div>
          <div className="border-t border-gray-400" style={{borderStyle: 'dotted'}}></div>

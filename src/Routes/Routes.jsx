@@ -8,6 +8,8 @@ import NewReleased from '../Components/NewReleased/NewReleased';
 import ReviewClub from '../Components/ReviewClub/ReviewClub';
 import BookDetails from '../Components/BookDetails/BookDetails';
 import BookDetail from '../Components/Book/BookDetail';
+import WishListBooks from '../Components/WishListBooks/WishListBooks';
+import ReadBooks from '../Components/ReadBooks/ReadBooks';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +23,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/listed-books',
-        element: <ListedBooks></ListedBooks>
+        element: <ListedBooks></ListedBooks>,
+        children: [
+          {
+            index: true,
+            element:<ReadBooks></ReadBooks>
+          },
+          {
+            path: '/listed-books/wish-list',
+            element: <WishListBooks></WishListBooks>
+          }
+        ]
       },
       {
         path: '/book-details/:id',

@@ -24,7 +24,7 @@ const NavBar = () => {
                
                 
                     <NavLink to='/' className={({isActive}) => isActive ? 'text-primary font-bold text-xl bg-green-500 p-2 rounded-xl' : 'font-bold p-2 text-xl rounded-xl border-2 border-green-300'}>Home</NavLink>
-                    <NavLink to='/listed-books' className={({isActive}) => isActive ? 'text-primary font-bold bg-green-500 text-xl p-2 rounded-xl' : 'font-bold text-xl p-2 rounded-xl border-2 border-green-300'}>Listed Pages</NavLink>
+                    <NavLink to='/listed-books' className={({isActive}) => isActive ? 'text-primary font-bold bg-green-500 text-xl p-2 rounded-xl' : 'font-bold text-xl p-2 rounded-xl border-2 border-green-300'}>Listed Books</NavLink>
                     <NavLink to='/pages-read' className={({isActive}) => isActive ? 'text-primary font-bold bg-green-500 text-xl p-2 rounded-xl' : 'font-bold text-xl p-2 rounded-xl border-2 border-green-300'}>Pages to Read</NavLink>
                     <NavLink to='/new-released' className={({isActive}) => isActive ? 'text-primary font-bold bg-green-500 text-xl p-2 rounded-xl' : 'font-bold text-xl p-2 rounded-xl border-2 border-green-300'}>New Released</NavLink>
                     <NavLink to='/review-club' className={({isActive}) => isActive ? 'text-primary font-bold bg-green-500 text-xl p-2 rounded-xl' : 'font-bold text-xl p-2 rounded-xl border-2 border-green-300'}>Review Club</NavLink>
