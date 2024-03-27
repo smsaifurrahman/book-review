@@ -3,6 +3,8 @@ import { getReadListFromLs, getWishListFromLs } from '../../localStorage';
 import { Link, Outlet } from 'react-router-dom';
 import ReadBooks from '../ReadBooks/ReadBooks';
 import WishListBooks from '../WishListBooks/WishListBooks';
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+
 
 export const sortingContext = createContext();
 
@@ -10,6 +12,8 @@ export const sortingContext = createContext();
 const ListedBooks = () => {
 
     const [tabIndex, setTabIndex] = useState(0);
+    const [showDropdown, setShowDropdown] = useState(false);
+
     
     
     const [readSortCriteria, setReadSortCriteria] = useState('') ;
@@ -36,12 +40,16 @@ const ListedBooks = () => {
             {/* This is dropDown Menu */}
             <div className='flex flex-col justify-center items-center  my-8'>
             <div className="dropdown ">
-                <div tabIndex={0} role="button" className="btn m-1 bg-green-500 text-white font-bold">Sort By</div>
-                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-
-                    <li onClick={()=> handleSortCriteria('rating',tabIndex)}><a>Rating</a></li>
-                    <li onClick={()=> handleSortCriteria('totalPages',tabIndex)}><a>Number of Pages</a></li>
-                    <li onClick={()=> handleSortCriteria('yearOfPublishing',tabIndex)}><a>Publish year</a></li>
+                <div tabIndex={0} role="button" className="btn m-1 bg-green-500 text-white font-bold"
+                
+                >Sort By <MdOutlineKeyboardArrowDown className='font-bold text-3xl' /> </div>
+                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                onClick={() => setShowDropdown(!showDropdown)}
+                >
+                 <li onClick={()=> handleSortCriteria('rating',tabIndex)}><a>Rating</a></li>
+                  <li onClick={()=> handleSortCriteria('totalPages',tabIndex)}><a>Number of Pages</a></li>
+                  <li onClick={()=> handleSortCriteria('yearOfPublishing',tabIndex)}><a>Publish year</a></li>
+               
                 </ul>
                 </div>
             </div>
