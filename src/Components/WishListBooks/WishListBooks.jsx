@@ -1,16 +1,40 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { getWishListFromLs } from '../../localStorage';
 import WishListCard from './WishListCard';
+import { sortingContext } from '../ListedBooks/ListedBooks';
 
 
 
 const WishListBooks = () => {
-    const [wishBooks, setReadBooks] = useState([]);
+    const {wishSortCriteria} = useContext(sortingContext)
+
+   
+  
+    const [wishBooks, setWishBooks] = useState([]);
 
     useEffect(()=> {
         const wishList = getWishListFromLs() || [];
-        setReadBooks(wishList)
-    },[]);
+        if(wishSortCriteria) {
+            let  sortedData = [...wishList];
+            if(wishSortCriteria === 'rating'  ) {
+                sortedData.sort((a, b) => b.rating - a.rating);
+            }else if(wishSortCriteria === "totalPages"  ){
+                sortedData.sort((a,b) => b.totalPages - a.totalPages);
+            }
+            else if(wishSortCriteria === "yearOfPublishing" ){
+                sortedData.sort((a,b) => b.yearOfPublishing - a.yearOfPublishing);
+            }
+            setWishBooks(sortedData)
+        }
+        else{
+            setWishBooks(wishList)
+        }
+    },[wishSortCriteria])
+
+    // useEffect(()=> {
+    //     const wishList = getWishListFromLs() || [];
+    //     setReadBooks(wishList)
+    // },[]);
 
     return (
        <div className='my-8' >

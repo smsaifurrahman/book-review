@@ -1,24 +1,47 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import { getReadListFromLs, getWishListFromLs } from '../../localStorage';
 import { Link, Outlet } from 'react-router-dom';
 import ReadBooks from '../ReadBooks/ReadBooks';
 import WishListBooks from '../WishListBooks/WishListBooks';
 
+export const sortingContext = createContext();
+
+
 const ListedBooks = () => {
 
     const [tabIndex, setTabIndex] = useState(0);
+    
+    
+    const [readSortCriteria, setReadSortCriteria] = useState('') ;
+    const [wishSortCriteria, SetWishSortCriteria] = useState('')
+
+    const handleSortCriteria = (criteria,tab) => {
+        if(criteria && tab ===0) {
+            setReadSortCriteria(criteria);
+        }
+        else if(criteria && tab ===1 ) {
+            SetWishSortCriteria(criteria);
+        }
+     
+
+    }
+    const sortingContextValue = {readSortCriteria, wishSortCriteria};
+    // console.log(sortCriteria);
 
 
     return (
-        <div>
+       <sortingContext.Provider value={sortingContextValue}>
+                 <div>
             <h1 className='text-3xl lg:text-5xl font-bold text-center py-3 m-2 lg:mt-4 lg:py-6 bg-gray-100 rounded-xl'>Books</h1>
             {/* This is dropDown Menu */}
             <div className='flex flex-col justify-center items-center  my-8'>
             <div className="dropdown ">
                 <div tabIndex={0} role="button" className="btn m-1 bg-green-500 text-white font-bold">Sort By</div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
+
+                    <li onClick={()=> handleSortCriteria('rating',tabIndex)}><a>Rating</a></li>
+                    <li onClick={()=> handleSortCriteria('totalPages',tabIndex)}><a>Number of Pages</a></li>
+                    <li onClick={()=> handleSortCriteria('yearOfPublishing',tabIndex)}><a>Publish year</a></li>
                 </ul>
                 </div>
             </div>
@@ -42,12 +65,14 @@ const ListedBooks = () => {
 
 
             <Outlet>
-                <ReadBooks></ReadBooks>
-                <WishListBooks></WishListBooks>
+                
             </Outlet>
+          
+       
 
        
         </div>
+       </sortingContext.Provider>
     );
 };
 

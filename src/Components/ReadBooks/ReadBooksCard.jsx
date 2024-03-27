@@ -8,7 +8,7 @@ import { MdOutlineRestorePage } from "react-icons/md";
 
 
 const ReadBooksCard = ({readBook}) => {
-    const { bookId, bookName,yearOfPublishing, author, image,  tags, rating , category,publisher,review, totalPages} = readBook || {}
+    const { bookId, bookName,yearOfPublishing, author, image,  tags, rating , category,publisher,review, totalPages} = readBook || {};
     return (
         <div className="card  card-side bg-base-100 border-2 py-1 lg:py-0 px-0 lg:px-6 mb-4">
             <figure className=' w-48 lg:w-1/4  rounded-xl'><img className='w-full h-52 lg:h-auto ' src={image} alt="Movie"/></figure>
@@ -20,7 +20,7 @@ const ReadBooksCard = ({readBook}) => {
                     <div className=' flex flex-col lg:flex-row gap-2 lg:gap-6 items-center'>
                         <span className='font-bold'>Tags: </span>
                         {tags && Array.isArray(tags) && tags.map(tag => (
-                            <button key={tag.id} className='btn text-[#23BE0A]'>#{tag}</button>
+                            <button key={tag} className='btn text-[#23BE0A]'>#{tag}</button>
                         ))}
                     </div>
                     <div className='flex gap-3 items-center'>
