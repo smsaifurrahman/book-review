@@ -8,7 +8,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 - 
 
-Website Name: Book Vibe
+**Website Name: Book Vibe
+Live LInk: https://66052b0fdb1eca5a2b27888a--deluxe-tapioca-fdbd09.netlify.app/
 
 
 Few functionality of the Website
