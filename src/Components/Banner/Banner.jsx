@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
         <div>
-    <div className="hero min-h-screen bg-base-200 mt-10">
-    <div className="hero-content flex-col lg:flex-row-reverse lg:gap-20">
+    <div className="hero min-h-screen bg-base-200  rounded-xl mt-10">
+    <div className="hero-content flex-col mx-2 lg:mx-0 lg:flex-row-reverse lg:gap-20">
         <img src={bannerImg} className=" rounded-lg w-[250px] lg:w-[400px]  shadow-2xl" />
         <div>
         <h1 className=" text-2xl lg:text-5xl font-bold">Books to freshen up <br />

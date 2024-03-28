@@ -3,8 +3,10 @@ import React from 'react';
 const ReviewClub = () => {
     return (
         <div>
-            <h1 className='text-3xl font-bold flex flex-col text-orange-500 items-center my-4'>This Section is going to be functional Soon</h1>
-            <h1 className='text-2xl font-bold flex flex-col items-center my-4'>Provide Review of the books You have read here</h1>
+			<div className='text-center'>
+			<h1 className='text-3xl font-bold flex flex-col text-orange-500 items-center my-4'>This Section is going to be functional Soon</h1>
+            <h1 className='text-2xl px-10 lg:px-2 font-bold flex flex-col items-center my-4'>Provide Review of the books You have read here</h1>
+			</div>
             <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
 	<div className="flex justify-between p-4">
 		<div className="flex space-x-4">

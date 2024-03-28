@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Home from '../Components/Home/Home';
 import Root from '../Components/Root/Root';
 import ListedBooks from '../Components/ListedBooks/ListedBooks';
-import PagesToRead from '../Components/PagesToRead/PagesToRead';
+// import PagesToRead from '../Components/PagesToRead/PagesToRead';
 import NewReleased from '../Components/NewReleased/NewReleased';
 import ReviewClub from '../Components/ReviewClub/ReviewClub';
 import BookDetails from '../Components/BookDetails/BookDetails';
@@ -11,7 +11,7 @@ import BookDetail from '../Components/Book/BookDetail';
 import WishListBooks from '../Components/WishListBooks/WishListBooks';
 import ReadBooks from '../Components/ReadBooks/ReadBooks';
 import ErrorPage from '../Components/ErrorPage/ErrorPage';
-import App from '../Components/PagesToRead/PagesToRead';
+// import App from '../Components/PagesToRead/PagesToRead';
 import ChartComponent from '../Components/PagesToRead/ChartComponent';
 
 const router = createBrowserRouter([

@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { getReadListFromLs } from '../../localStorage';
 import ReadBooksCard from './ReadBooksCard';
-import { sortingContext } from '../ListedBooks/ListedBooks';
+import { SortingContext } from '../ListedBooks/ListedBooks';
 
 
 const ReadBooks = () => {
-   const {readSortCriteria} = useContext(sortingContext);
+   const {readSortCriteria} = useContext(SortingContext);
 
 
    const [readBooks, setReadBooks] = useState([]);

@@ -6,13 +6,13 @@ import WishListBooks from '../WishListBooks/WishListBooks';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 
-export const sortingContext = createContext();
+export const SortingContext = createContext();
 
 
 const ListedBooks = () => {
 
     const [tabIndex, setTabIndex] = useState(0);
-    const [showDropdown, setShowDropdown] = useState(false);
+
 
     
     
@@ -34,9 +34,9 @@ const ListedBooks = () => {
 
 
     return (
-       <sortingContext.Provider value={sortingContextValue}>
-                 <div>
-            <h1 className='text-3xl lg:text-5xl font-bold text-center py-3 m-2 lg:mt-4 lg:py-6 bg-gray-100 rounded-xl'>Books</h1>
+       <SortingContext.Provider value={sortingContextValue}>
+                 <div >
+            <h1 className='text-3xl lg:text-5xl font-bold   lg:mx-0 text-center py-3 m-2 lg:mt-4 lg:py-6 bg-gray-100 rounded-xl'>Books</h1>
             {/* This is dropDown Menu */}
             <div className='flex flex-col justify-center items-center  my-8'>
             <div className="dropdown ">
@@ -44,9 +44,12 @@ const ListedBooks = () => {
                 
                 >Sort By <MdOutlineKeyboardArrowDown className='font-bold text-3xl' /> </div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-                onClick={() => setShowDropdown(!showDropdown)}
+               
                 >
-                 <li onClick={()=> handleSortCriteria('rating',tabIndex)}><a>Rating</a></li>
+                <li onClick={()=> handleSortCriteria('rating',tabIndex)} >
+                   <a>Rating</a>
+               </li>
+
                   <li onClick={()=> handleSortCriteria('totalPages',tabIndex)}><a>Number of Pages</a></li>
                   <li onClick={()=> handleSortCriteria('yearOfPublishing',tabIndex)}><a>Publish year</a></li>
                
@@ -57,30 +60,31 @@ const ListedBooks = () => {
             
            
 
-            <div className="flex items-center  -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
+            <div className="flex items-center mx-0 lg:mx-0 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
             <Link to={'/listed-books'} onClick={()=> setTabIndex(0)}
-                 rel="noopener noreferrer" href="#" className={`flex items-center flex-shrink-0 px-5 py-3 flex-grow-1 space-x-2 ${tabIndex === 0 ? 'border border-b-0' : 'border-b'} dark:border-gray-600 dark:text-gray-600`}>
+                 rel="noopener noreferrer" href="#" className={`flex items-center flex-shrink-0 px-5 py-3 flex-grow-0 lg:flex-grow-1 space-x-2 ${tabIndex === 0 ? 'border border-b-0' : 'border-b'} dark:border-gray-600 dark:text-gray-600`}>
                             <span>Read Books</span>
                
             </Link>
             <Link to={'/listed-books/wish-list'} onClick={()=> setTabIndex(1)}
-                 rel="noopener noreferrer" href="#" className={`flex items-center flex-shrink-0 px-5 py-3 flex-grow  space-x-2 ${tabIndex === 1 ? 'border border-b-0' : 'border-b'} dark:border-gray-600 dark:text-gray-600`}>
+                 rel="noopener noreferrer" href="#" className={`flex items-center flex-shrink-0 px-5 py-3 lg:flex-grow  space-x-2 ${tabIndex === 1 ? 'border border-b-0' : 'border-b'} dark:border-gray-600 dark:text-gray-600`}>
                             <span>WishLists Books</span>
                
             </Link>
             </div> 
+
             
 
 
-            <Outlet>
-                
-            </Outlet>
+          <div className='mx-2 lg:mx-0'>
+                <Outlet ></Outlet>
+          </div>
           
        
 
        
         </div>
-       </sortingContext.Provider>
+       </SortingContext.Provider>
     );
 };
 

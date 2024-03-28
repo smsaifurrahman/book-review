@@ -3,6 +3,7 @@ import React from 'react';
 import { CiLocationOn } from "react-icons/ci";
 import { IoPeopleOutline } from "react-icons/io5";
 import { MdOutlineRestorePage } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 
@@ -23,7 +24,7 @@ const ReadBooksCard = ({readBook}) => {
                             <button key={tag} className='btn text-[#23BE0A]'>#{tag}</button>
                         ))}
                     </div>
-                    <div className='flex gap-3 items-center'>
+                    <div className='flex gap-1 lg:gap-3  items-center'>
                      <CiLocationOn />
                      <p>Year of Publishing: <span>{yearOfPublishing}</span> </p>
 
@@ -31,10 +32,10 @@ const ReadBooksCard = ({readBook}) => {
                  
                 </div>
                 {/* Publisher Namee */}
-                <div className=' flex-wrap -mt-4 lg:mt-0 lg:flex items-center gap-1 lg:gap-6'>
-                    <div className=' flex items-center gap-2'>
+                <div className=' flex-wrap -mt-2 lg:mt-0 lg:flex items-center gap-1 lg:gap-6'>
+                    <div className=' flex justify-center border-y-2 lg:border-y-0 items-center gap-2'>
                         <IoPeopleOutline />
-                        <p>Publisher: <span>{publisher}</span> </p>
+                        <p className=''>Publisher: <span>{publisher}</span> </p>
 
                     </div>
                     <div className=' flex items-center gap-2'>
@@ -48,8 +49,10 @@ const ReadBooksCard = ({readBook}) => {
                 <div className="">
                
                 <button type="button" className="px-8 btn bg-[#c1d3e9] py-3 font-semibold text-[#1c3655] rounded-full dark:bg-gray-800 dark:text-gray-100">Category: {category}</button>
-                <button type="button" className="px-8 btn bg-[#FFAC3326] py-3 text-orange-500 font-semibold rounded-full dark:bg-gray-800 dark:text-gray-100">Rating: {rating} </button>
+                <button type="button" className="px-8 lg:my-0 my-2 btn bg-[#FFAC3326] py-3 text-orange-500 font-semibold rounded-full dark:bg-gray-800 dark:text-gray-100">Rating: {rating} </button>
+                <Link to={`/book-details/${bookId}`}>
                 <button type="button" className="px-8 btn bg-[#23BE0A] py-3 font-semibold rounded-full dark:bg-gray-800 text-white dark:text-gray-100">View Details</button>
+                </Link>
                 </div>
             </div>
         </div>

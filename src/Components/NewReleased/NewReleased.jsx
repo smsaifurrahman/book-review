@@ -4,10 +4,10 @@ import { IoIosStarOutline } from 'react-icons/io';
 const NewReleased = () => {
     return (
        <div>
-        <h1 className='text-3xl font-bold flex flex-col items-center my-4'>These Books will be Released Soon</h1>
-             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
+        <h1 className='lg:text-3xl text-orange-600 text-xl font-bold flex flex-col justify-center items-center my-4'>These Books will be Released Soon</h1>
+             <div className='grid grid-cols-1 lg:mx-0 mx-2 lg:grid-cols-3 gap-5'>
             <div className="card border-2 bg-base-100 shadow-xl">
-        <figure className="px-10 pt-10">
+        <figure className="lg:px-10 px-1 pt-10">
             <img src="https://i.ibb.co/jH80v5D/new.jpg" alt="Shoes" className="rounded-xl w-full h-60" />
         </figure>
         <div className="card-body">

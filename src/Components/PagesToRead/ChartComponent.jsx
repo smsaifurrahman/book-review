@@ -19,17 +19,28 @@ const TriangleBar = (props) => {
 
 const ChartComponent = () => {
     const [readList, setReadList] = useState([]);
-    
+    // let width =  width = window.innerWidth >= 768 ? 1000 : 500;
     useEffect(() => {
         const readLists = getReadListFromLs() || [];
         setReadList(readLists);
+        
     }, []);
+  
 
     return (
-        <div className='flex flex-col justify-center items-center'>
+        <div>
+            
+            {readList.length < 1 ? <h1 className='lg:text-3xl text-2xl pt-44 text-orange-600 font-bold flex flex-col items-center justify-center'>You Have Not Selected Any Book Yet <span className='text-xl text-black'>Select at least a book to see data</span></h1> : 
+            
+            <div className='flex flex-col justify-center items-center'>
+            
             <div className="w-full max-w-screen-lg overflow-x-auto">
                 <BarChart
-                    width={1000}
+                    className="w-full"
+
+                    width={1000} 
+                    // className="w-full sm:w-1000 md:w-500"
+
                     height={500}
                     data={readList}
                     margin={{
@@ -49,6 +60,10 @@ const ChartComponent = () => {
                     </Bar>
                 </BarChart>
             </div>
+             </div> 
+            
+            }
+            
         </div>
     );
 };

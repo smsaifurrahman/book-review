@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { getWishListFromLs } from '../../localStorage';
 import WishListCard from './WishListCard';
-import { sortingContext } from '../ListedBooks/ListedBooks';
+import { SortingContext } from '../ListedBooks/ListedBooks';
 
 
 
 const WishListBooks = () => {
-    const {wishSortCriteria} = useContext(sortingContext)
+    const {wishSortCriteria} = useContext(SortingContext)
 
    
   
