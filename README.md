@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 - 
 
 Website Name: Book Vibe
-Live Link: https://660418794f045100a29c1eb0--lighthearted-pegasus-925166.netlify.app/listed-books
+
 
 Few functionality of the Website
 > The Website allows users to add books to a Read list ,and Wish list
